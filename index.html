@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GearHub BD</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to GearHub BD</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h2>Home</h2>
+            <p>Your one-stop shop for all your gear needs!</p>
+        </section>
+
+        <section id="products">
+            <h2>Products</h2>
+            <p>Explore our wide range of products.</p>
+        </section>
+
+        <section id="about">
+            <h2>About Us</h2>
+            <p>Learn more about GearHub BD and our mission.</p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Get in touch with us for any inquiries.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 GearHub BD. All rights reserved.</p>
+    </footer>
+    <script>
+        // Example JavaScript functionality
+        document.addEventListener('DOMContentLoaded', () => {
+            const navLinks = document.querySelectorAll('nav ul li a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const targetId = link.getAttribute('href').substring(1);
+                    const targetSection = document.getElementById(targetId);
+                    if (targetSection) {
+                        targetSection.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            });
+        });
+    </script>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.5.2/css/bootstrap.min.css">
+    </head>
+</body>
+
+</html>
